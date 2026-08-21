@@ -1,0 +1,104 @@
+Table accounts {
+  account_id bigint
+  customer_id bigint
+  branch_id bigint
+  account_type text
+  balance double
+  open_date text
+  status text
+}
+
+Table branches {
+  branch_id bigint
+  branch_name text
+  city text
+  state text
+  opened_date text
+  ifsc_code text
+}
+
+Table card_transactions {
+  card_txn_id bigint
+  card_id bigint
+  txn_date text
+  merchant_category text
+  amount double
+  is_fraud bigint
+}
+
+Table cards {
+  card_id bigint
+  customer_id bigint
+  account_id bigint
+  card_type text
+  issue_date text
+  expiry_date text
+  credit_limit bigint
+  status text
+}
+
+Table customers {
+  customer_id bigint
+  name text
+  gender text
+  date_of_birth text
+  city text
+  state text
+  phone bigint
+  email text
+  occupation text
+  annual_income bigint
+  join_date text
+  credit_score bigint
+}
+
+Table employees {
+  employee_id bigint
+  name text
+  branch_id bigint
+  role text
+  hire_date text
+  salary bigint
+}
+
+Table loan_payments {
+  payment_id bigint
+  loan_id bigint
+  payment_date text
+  amount_paid double
+  principal_component double
+  interest_component double
+  late_payment_flag bigint
+}
+
+Table loans {
+  loan_id bigint
+  customer_id bigint
+  branch_id bigint
+  loan_type text
+  loan_amount double
+  interest_rate double
+  term_months bigint
+  start_date text
+  status text
+}
+
+Table support_tickets {
+  ticket_id bigint
+  customer_id bigint
+  issue_type text
+  date_opened text
+  date_resolved text
+  status text
+  satisfaction_score bigint
+}
+
+Table transactions {
+  transaction_id bigint
+  account_id bigint
+  txn_date text
+  txn_type text
+  amount double
+  channel text
+  merchant_category text
+}
